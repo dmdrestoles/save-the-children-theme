@@ -1,0 +1,289 @@
+/* My Account Styles */
+.myAccount {
+	padding-top: 14vh;
+	margin-bottom: 100px;
+}
+
+.myAccount .title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	text-align: center;
+	color: #DA291C;
+	margin: 70px;
+}
+.myAccount-container {
+	width: 90%;
+	display: grid;
+	margin: 0 5%;
+	grid-template-columns: 20% 80%;
+}
+.sidebar {
+	font-family: GillSans;
+	font-weight: bold;
+}
+.sidebar .header {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.sidebar .options {
+	font-size: 20px;
+}
+.options a {
+	display: block;
+	margin: 15px 0;
+	color: Black;
+}
+
+.myAccount-content .title {
+	margin: 0 10px;
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: #DA291C;
+	text-align: left;
+}
+.line {
+	width: 100%;
+	height: 2px;
+	background: #7C7C7C;
+	margin-top: 10px;
+}
+.myAccount-content .main-container {
+	display: grid;
+	width: 95%;
+	grid-template-columns: 20% 75%;
+	column-gap: 5%;
+	grid-column-gap: 5%;
+	row-gap: 5%;
+	grid-row-gap: 5%;
+	margin: 30px 0 50px;
+}
+.profile-pic img, .profile-info {
+	width: 100%;
+}
+.profile-info form {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 49% 49%;
+	column-gap: 2%;
+	grid-column-gap: 2%;
+	grid-template-rows: 19% 21% 18% 21%;
+	row-gap: 4%;
+	grid-row-gap: 4%;
+}
+.profile-info form > * {
+	margin: 0;
+}
+.firstName {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.firstNameInput {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	
+}
+.lastName {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.lastNameInput {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.emailAdd {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	
+}
+.emailInput {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+.profile-info form label {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.change-pw-container {
+	display: grid;
+	grid-template-columns: 45% 45%;
+	column-gap: 4%;
+	grid-column-gap: 4%;
+	grid-template-rows: 18% auto 18% auto;
+	row-gap: 4%;
+	grid-row-gap: 4%;
+	margin-top: 20px;
+}
+.change-pw-container label {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.change-pw-container input {
+	height: 40px;
+}
+.currPass {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.currPassInput {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.newPass {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.newPassInput {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+.confirmPass {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.confirmPassInput {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+.saveChanges {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	margin-top: 20px;
+	width: 50%;
+	margin-left: 50%;
+	background: #F2A900;
+	color: White;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+input[type="text"]
+{
+    font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 10px;
+}
+
+
+/* Modal CSS */
+.modal-container{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.9;
+  background: #222;
+  z-index: 40000;
+  top:0;
+  left: 0;
+  overflow: hidden;
+
+  animation-name: fadeIn_Container;
+  animation-duration: 1s;
+}
+.modal{
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	margin-top: 10%;
+	background: White;
+	position: fixed;
+	z-index: 40001;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #000;
+
+	animation-name: fadeIn_Modal;
+	animation-duration: 0.8s;
+	text-align: center;
+	align-items: center;
+}
+.modal-header{
+	width: 100%;
+	height: 30%;
+	border-radius: 10px 10px 0px 0px;
+	background: #DA291C;
+	padding: 1%;
+	
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	color: White;
+}
+.modal-content{
+	width: 100%;
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 30px;
+	padding: 50px;	
+}
+.modal-footer{
+	width: 100%;
+	border-radius: 0px 0px 10px 10px;
+}
+.modal-footer button{
+	background: #F2A900;
+	border-radius: 5px;
+	margin: 0 auto 30px;
+	padding: 15px;
+	
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: White;
+	cursor: pointer;
+	border: none;
+}
+
+/****ANIMATIONS****/
+@keyframes fadeIn_Modal {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_Container {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,145 @@
+.coursePage {
+	padding-top: 14vh;
+	margin: auto;
+	margin-bottom: 100px;
+	width: 92%;
+}
+
+/* Page Header */
+.progress-tracker {
+	margin: 50px 0;
+}
+.breadcrumbs {
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+}
+div.breadcrumbs > div:nth-child(2) {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 18px;
+	color: #7C7C7C;
+	margin: 0 20px;
+}
+.breadcrumbs .main-title {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 18px;
+	color: #DA291C;
+}
+.breadcrumbs .page-title {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 18px;
+	color: #7C7C7C;
+}
+.tracker {
+	background: #DA291C;
+	border-radius: 20px;
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	color: White;
+	padding: 8px 15px;
+	
+	display: flex;
+    align-items: center;	
+    margin-left: auto;
+	height: 100%;
+}
+.bar {
+	background: rgba(209, 204, 189, 0.25);
+	border-radius: 20px;
+	height: 10px;
+}
+.percentage {
+	margin: 10px 0;
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 15px;
+}
+.bar div {
+	height: 100%;
+	background: #F2A900;
+	border-radius: 20px;
+}
+
+.line {
+	width: 100%;
+	height: 2px;
+	background: #7C7C7C;
+	margin: 40px 0;
+}
+
+/* Page Footer */
+.page-footer {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: center;
+	justify-items: center;
+}
+.prev {
+	justify-self: start;
+	border: none;
+	cursor: pointer;
+}
+.next {
+	justify-self: end;
+	border: none;
+	cursor: pointer;
+}
+.page-footer * {
+	display: inline-block;
+	width: fit-content;
+	padding: 15px 20px;
+	background: #F2A900;
+	border-radius: 5px;
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+/* Page Content (also in content.css*/
+.page-content .page-title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	color: Black;
+}
+.body-header {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 30px;
+	color: #000000;
+	margin: 40px 0 25px;
+}
+.body-subheader {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: #000000;
+	margin: 25px 0;
+}
+.body-text {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	color: #000000;
+	text-align: left;
+}
+.body-list {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	color: #000000;
+	margin: 40px;
+}
+.two-column{
+	column-count: 2;
+    column-gap: 40px;
+}
+ul li {
+    list-style-position: outside;
+	margin: 2px 0;
+}

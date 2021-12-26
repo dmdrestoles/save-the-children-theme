@@ -5,3 +5,23 @@ Version: 1.0
 Description: Theme for the E-H2H Website
 Author: Dan Mark Restoles
 */
+@font-face {
+    font-family: GillSans;
+    src: url('fonts/Gill Sans/Fonts/GillSansInfantW01.ttf');
+}
+@font-face {
+    font-family: TradeGothicBold;
+    src: url('fonts/Trade Gothic/Fonts/TradeGothicW02-BoldCn20.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+}

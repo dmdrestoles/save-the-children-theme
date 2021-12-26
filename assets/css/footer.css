@@ -1,0 +1,53 @@
+.title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	text-align: center;
+	color: White;
+	margin-top: 100px;
+}
+.text {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	color: White;
+	width: 600px;
+	margin: auto;
+	margin-top: 50px;	
+}
+
+/* Footer Styles */
+.footer {
+	width: 100%;
+	background: linear-gradient(92.69deg, #DA291C 41.67%, #761706 100%);
+	color: White;
+	display: flex;
+	align-items: flex-start;
+	padding: 50px;
+}
+.footer .title {
+	margin: 0;
+	font-size: 30px;
+	text-align: left;
+}
+.footer .text, .copyright {
+	margin-top: 30px;
+	font-size: 20px;
+	text-align: left;
+}
+.socmed {
+	width: 35%;
+	margin-left: auto;
+	margin-right: 0;
+}
+.socmed-container, .socmed-container a {
+	display: flex;
+}
+.socmed-container span {
+	width: 50px;
+	height: 50px;
+	background: Gray;
+	border-radius: 50%;
+	margin-right: 20px;
+	margin-top: 20px;
+}

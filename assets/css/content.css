@@ -1,0 +1,68 @@
+/* Page Content (also in content.css*/
+.page-content .page-title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	color: Black;
+}
+.body-header {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 30px;
+	color: #000000;
+	margin: 40px 0 25px;
+}
+.body-subheader {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: #000000;
+	margin: 30px 0;
+}
+.body-text {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	color: #000000;
+	text-align: left;
+}
+.body-list {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	color: #000000;
+	margin: 40px;
+}
+.two-column{
+	column-count: 2;
+    column-gap: 40px;
+}
+ul li {
+    list-style-position: outside;
+	margin: 2px 0;
+}
+.active {
+	display: block;
+}
+.body-table {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 20% 75%;
+	grid-template-rows: auto;
+	grid-column-gap: 5%;
+	column-gap: 5%;
+	grid-row-gap: 3%;
+	row-gap: 3%;
+	margin: 20px 0 100px;
+}
+.body-table > div {
+	margin: 10px 0;
+	list-style-position: inside;
+}
+.body-image {
+	margin-bottom: 40px;
+}
+.body-link {
+	text-decoration: underline;
+	color: #DA291C;
+}
+	

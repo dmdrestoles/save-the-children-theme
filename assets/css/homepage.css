@@ -1,0 +1,294 @@
+/* Header Carousel/Slider */
+
+#slider {
+   background: White;
+   height: 100%;
+   width: 100%;
+   margin: auto;
+   overflow: visible;
+}
+#mask {
+   overflow: hidden;
+   height: 100%;
+}
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+}
+#slider li {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   right: -100%;
+   list-style: none;
+   
+}
+
+/* Slider Image List */
+#slider li.first {
+   animation: cycle 20s linear infinite;
+   background: Violet;
+}
+#slider li.second {
+   animation: cycletwo 20s linear infinite;
+   background: Blue;
+}
+#slider li.third {
+   animation: cyclethree 20s linear infinite;
+  background: Yellow;
+}
+#slider li.fourth {
+   animation: cyclefour 20s linear infinite;
+   background: Green;
+}
+
+/* Slider Animations */
+@keyframes cycle {
+   0%  { right: 0px; }
+   5%  { right: 0px; }
+   20% { right: 0px; opacity:1; z-index:0; } 
+   25% { right: 325px; opacity: 0; z-index: 0; }
+   26% { right: -325px; opacity: 0; z-index: -1; } 
+   90% { right: -325px; opacity: 0; z-index: 0; }
+   95% { right: -325px; opacity: 0; } 
+   100%{ right: 0px; opacity: 1; }
+}
+@keyframes cycletwo {
+   0%  { right: -325px; opacity: 0; } 
+   20% { right: -325px; opacity: 0; }
+   25% { right: 0px; opacity: 1; }
+   30% { right: 0px; opacity: 1; }  
+   45% { right: 0px; opacity: 1; z-index: 0; }   
+   50% { right: 325px; opacity: 0; z-index: 0; } 
+   51% { right: -325px; opacity: 0; z-index: -1; }   
+   100%{ right: -325px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclethree {
+   0%  { right: -325px; opacity: 0; } 
+   45% { right: -325px; opacity: 0; }
+   50% { right: 0px; opacity: 1; }
+   55% { right: 0px; opacity: 1; }  
+   70% { right: 0px; opacity: 1; z-index: 0; }   
+   75% { right: 325px; opacity: 0; z-index: 0; } 
+   76% { right: -325px; opacity: 0; z-index: -1; }   
+   100%{ right: -325px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefour {
+   0%  { right: -325px; opacity: 0; } 
+   70% { right: -325px; opacity: 0; }
+   75% { right: 0px; opacity: 1; }
+   80% { right: 0px; opacity: 1; }  
+   95% { right: 0px; opacity: 1; z-index: 0; }   
+   100% { right: 325px; opacity: 0; z-index: 0; } 
+}
+/* Slider Identifier */ 
+.slider-dots {
+	width: 10%;
+	position: absolute;
+	top: 65%;
+	left: 0;
+	right: 0;	
+	margin-left: auto;
+	margin-right: auto;
+}
+.slider-dots span {
+	height: 15px;
+	width: 15%;
+	margin: 0 3.5% 0 3.5%;
+	border-radius: 50%;
+	display: inline-block;
+	border: 2px solid White;
+}
+
+/* Slider Image List */
+.slider-dots .dot1 {
+   animation: cycle1 20s linear infinite;
+}
+.slider-dots .dot2{
+   animation: cycletwo1 20s linear infinite;
+}
+.slider-dots .dot3 {
+   animation: cyclethree1 20s linear infinite;
+}
+.slider-dots .dot4 {
+   animation: cyclefour1 20s linear infinite;
+}
+
+/* Slider Animations */
+@keyframes cycle1 {
+   0%  { background-color: White; }
+   20% { background-color: White; } 
+   25% { background-color: transparent;  }
+   100%{ background-color: transparent; }
+}
+@keyframes cycletwo1 {
+   0%  { background-color: transparent; } 
+   20% { background-color: transparent;  }
+   30% { background-color: White; } 
+   45% { background-color: White; }   
+   50% { background-color: transparent; }  
+   100%{ background-color: transparent; }
+}
+@keyframes cyclethree1 {
+   0%  { background-color: transparent; } 
+   45% { background-color: transparent; }
+   50% { background-color: White; }  
+   70% { background-color: White; }   
+   75% { background-color: transparent; }   
+   100%{ background-color: transparent; }
+}
+@keyframes cyclefour1 {
+   0%  { background-color: transparent; } 
+   70% { background-color: transparent; }
+   75% { background-color: White; } 
+   95% { background-color: White; }   
+   100% { background-color: transparent; } 
+}
+/* End of Header Carousel/Slider */
+
+.header-caption {
+	width: 100%;
+	position: absolute;
+	top: 190px;
+	display: flex;
+}
+.header-caption .title-container {
+	width: 50%;
+}
+.header-caption h1 {
+	display: inline-block;
+	font-size: 60px;
+	font-family: TradeGothicBold;
+	background: White;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.header-caption .title1 {
+	margin-left: 70px;
+}
+.header-caption .title2 {
+	margin-left: 175px;
+	margin-top: -5px;
+}
+.header-caption .subtitle-container{
+	width: 35%;
+	text-align: center;
+	margin-left: 120px;
+}
+.header-caption .subtitle {
+	display: inline-block;
+	font-size: 18px;
+	font-family: GillSans;
+	font-weight: 500;
+	background: White;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.startBtn {
+	position: absolute;
+	z-index: 90;
+	display: inline-block;
+	background: #F2A900;
+	border-radius: 5px;
+	padding: 10px;
+	font-family: GillSans;
+	font-size: 20px;
+	font-weight: bold;
+	color: White;
+	text-align: center;
+	width: 20%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -170px;
+}
+.arc {
+	position: absolute;
+	width: 120%;
+	height: 600px;
+    border-radius: 50% 50% 0 0;
+    background-color: #DA291C;
+	margin-left: -10vw;
+	margin-top: -150px;
+}
+.scroll-down {
+	margin: auto;
+	width: 80px;
+	margin-top: 80px;
+}
+.scroll-down img{
+	width: 80px;
+	height: 60px;
+	margin: auto;
+}
+.title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	text-align: center;
+	color: White;
+	margin-top: 100px;
+}
+.text {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	color: White;
+	width: 600px;
+	margin: auto;
+	margin-top: 50px;	
+}
+
+.content-container {
+	margin-top: 450px;
+}
+.objective {
+	display: flex;
+	margin-bottom: 100px;
+}
+.objective .title, .video-instructions .title {
+	color: #DA291C;
+}
+.objective .text, .video-instructions .text {
+	color: #000000;
+}
+.img-content {
+	width: 25%;
+}
+.text-content {
+	width: 50%;
+}
+.img-content img{
+	width: 100%;
+	margin-top: 55%;
+}
+
+.video-instructions {
+	background: rgba(209, 204, 189, 0.25);
+	margin: auto;
+	padding: 100px;
+}
+.video {
+	display: block;
+	margin: 0 auto 75px;
+}
+.video-instructions .title, .video-instructions .text {
+	text-align: left;
+	width: 70%;
+	margin: 20px 9% 40px; 
+}
+.bottomStartBtn {
+	background: #F2A900;
+	border-radius: 5px;
+	padding: 10px;
+	font-family: GillSans;
+	font-size: 20px;
+	font-weight: bold;
+	color: White;
+	text-align: center;
+	width: 22%;
+	margin: 110px auto 0;
+}

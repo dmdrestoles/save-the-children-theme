@@ -1,0 +1,72 @@
+/* Login Page Styles */
+.login-page {
+	padding-top: 14vh;
+	margin-bottom: 7.5%;
+}
+.login-page  .title {
+	font-family: TradeGothicBold;
+	font-size: 40px;
+	text-align: center;
+	color: Black;
+	margin-top: 70px;
+}
+.text {
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	color: White;
+	width: 600px;
+	margin: auto;
+	margin-top: 50px;	
+}
+.login-container {
+	width: 40%;
+	margin: auto;
+	margin-top: 30px;
+}
+.login-container label {
+	color: Black;
+	text-align: left;
+}
+.login-container input {
+	margin-top: 10px;
+	width: 100%;
+	height: 40px;
+	border: 3px solid #7C7C7C;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 10px;	
+}
+.login-container input[type="text"]
+{
+    font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+}
+.forgotPass {
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 18px;
+	color: #DA291C;
+	margin-top: 20px;
+}
+.login-container .loginBtn {
+	background: #F2A900;
+	border-radius: 5px;
+	height: 60px;
+	width: 40%;
+	font-family: GillSans;
+	font-weight: bold;
+	font-size: 20px;
+	color: White;
+	margin: 0 30%;
+}
+.register {
+	display: block;
+	text-align: center;
+	font-family: GillSans;
+	font-weight: 500;
+	font-size: 18px;
+	color: Black;
+}

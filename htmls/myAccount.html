@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Save the Children - My Account </title>
+		<link rel="stylesheet" href="main.css" type="text/css">
+		<link rel="stylesheet" href="myAccount.css" type="text/css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+		<!--<script src="#"></script>-->
+	</head>
+	<body>
+		<!--My Account-->
+		<div class="myAccount">
+			<div class="title">My Account</div>
+			<div class="myAccount-container">
+				<div class="sidebar">
+					<div class="header">Hello, Dan!</div>
+					<div class="options">
+						<a href="#" style="color: #DA291C">My Account</a>
+						<a href="#">Help</a>
+						<a href="#">Logout</a>
+					</div>
+				</div>
+				<div class="myAccount-content">
+					<div>
+						<div class="title">PROFILE DETAILS</div>
+						<div class="line"></div>
+						<div class="main-container">
+							<div class="profile-pic"><img src="images/pfp.png"></div>
+							<div class="profile-info">
+								<form class="profile-container">
+									<label for="firstName" class="firstName">First Name*</label>
+									<input type="text" name="firstName" class="firstNameInput">
+									<label for="lastName" class="lastName">Last Name*</label>
+									<input type="text" name="lastName" class="lastNameInput">
+									<label for="emailAdd" class="emailAdd">E-mail Address*</label>
+									<input type="text" name="emailAdd" class="emailInput">
+								</form>
+							</div>
+						</div>
+					</div>					
+					<div>
+						<div class="title">CHANGE PASSWORD</div>
+						<div class="line"></div>
+						<form class="change-pw-container" id="myForm" onsubmit="openModal();return false">
+							<label for="currPass" class="currPass">Current Password</label>
+							<input type="text" name="currPass" class="currPassInput">
+							<label for="newPass" class="newPass">New Password</label>
+							<input type="text" name="newPass" class="newPassInput">
+							<label for="confirmPass" class="confirmPass">Confirm New Password</label>
+							<input type="text" name="confirmPass" class="confirmPassInput">
+							<input type="submit" class="saveChanges" value="SAVE CHANGES" id="saveChanges" onclick="openModal">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal-container" id="modal-background">
+		  
+		</div>
+		<div class="modal" id="modal">
+		  <div class="modal-header">
+			<div>Reminder</div>
+		  </div>
+		  <div class="modal-content">
+			<div>Changes Saved!</div>
+		  </div>
+		  <div class="modal-footer">
+			<button class="close">OK</button>
+		  </div>
+		</div>
+
+		<script>
+			$("#saveChanges").click(function(){
+				$("#modal-background").css("display","block");
+				$("#modal").css("display","block");
+				$("body").css("overflow","hidden");
+			});
+
+
+			$(".close").click(function(){
+				$("#modal-background").fadeOut();
+				$("#modal").fadeOut();
+				$("body").css("overflow","visible");
+			});
+		</script>
+	</body>
+</html>

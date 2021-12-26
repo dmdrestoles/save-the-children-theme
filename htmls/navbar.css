@@ -1,0 +1,79 @@
+/* Navbar Styles */
+.navbar {
+	height: 14vh;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	z-index: 100;
+	background: #DA291C;
+}
+.navbar .logo {
+	width: 18%;
+	margin: 0;
+	margin-left: 3%;
+	text-align: left;
+}
+.navbar .logo img, .account img{
+	height: 60%;
+}
+.dropdown {
+	font-family: GillSans;
+	font-size: 20px;
+	height: 14vh;
+	white-space: nowrap;
+}
+.nav-item {
+	cursor: pointer;
+	display: flex;
+	align-items:center;
+    justify-content:center;
+	height: 100%;
+	min-width: 100px;
+	color: White;
+	font-family: GillSans;
+	font-size: 20px;
+	font-weight: bold;
+	appearance: button;
+	margin: 0 10px;	
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #E5E5E5;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: -10;
+	margin: 0 0 0 10px;
+}
+.dropdown-content a {
+	color: Black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {
+	color: #DA291C;
+	text-decoration: underline;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.account {
+	display: flex;
+    align-items: center;
+	margin-right: 3%;
+    margin-left: auto;
+	height: 100%;
+}
+.account .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #E5E5E5;
+	width: 10%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: -10;
+	margin: 16.9% 0 0 -2.5%;
+}

@@ -1,0 +1,20 @@
+@font-face{
+font-family:"GillSansInfantW01-BoldIt";
+src:url("Fonts/GillSansInfantW01-BoldIt.eot?#iefix");
+src:url("Fonts/GillSansInfantW01-BoldIt.eot?#iefix") format("eot"),url("Fonts/GillSansInfantW01-BoldIt.woff2") format("woff2"),url("Fonts/GillSansInfantW01-BoldIt.woff") format("woff"),url("Fonts/GillSansInfantW01-BoldIt.ttf") format("truetype"),url("Fonts/GillSansInfantW01-BoldIt.svg#19570ca1-8945-47b5-8ea3-bd27525a07b2") format("svg");
+}
+@font-face{
+font-family:"GillSansInfantW01-Italic";
+src:url("Fonts/GillSansInfantW01-Italic.eot?#iefix");
+src:url("Fonts/GillSansInfantW01-Italic.eot?#iefix") format("eot"),url("Fonts/GillSansInfantW01-Italic.woff2") format("woff2"),url("Fonts/GillSansInfantW01-Italic.woff") format("woff"),url("Fonts/GillSansInfantW01-Italic.ttf") format("truetype"),url("Fonts/GillSansInfantW01-Italic.svg#3cbd2991-a894-4b03-a5c1-359a5b699411") format("svg");
+}
+@font-face{
+font-family:"GillSansInfantW01-Bold";
+src:url("Fonts/GillSansInfantW01-Bold.eot?#iefix");
+src:url("Fonts/GillSansInfantW01-Bold.eot?#iefix") format("eot"),url("Fonts/GillSansInfantW01-Bold.woff2") format("woff2"),url("Fonts/GillSansInfantW01-Bold.woff") format("woff"),url("Fonts/GillSansInfantW01-Bold.ttf") format("truetype"),url("Fonts/GillSansInfantW01-Bold.svg#d4a5f926-22a9-4beb-b32d-086e00fb1327") format("svg");
+}
+@font-face{
+font-family:"GillSansInfantW01";
+src:url("Fonts/GillSansInfantW01.eot?#iefix");
+src:url("Fonts/GillSansInfantW01.eot?#iefix") format("eot"),url("Fonts/GillSansInfantW01.woff2") format("woff2"),url("Fonts/GillSansInfantW01.woff") format("woff"),url("Fonts/GillSansInfantW01.ttf") format("truetype"),url("Fonts/GillSansInfantW01.svg#0d1df702-21b0-4f94-a0fb-9f2fef8529d0") format("svg");
+}
