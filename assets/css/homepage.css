@@ -149,7 +149,7 @@
 .header-caption {
 	width: 100%;
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	display: flex;
 }
 .header-caption .title-container {
@@ -203,6 +203,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -170px;
+    top: 100%;
 }
 .arc {
 	position: absolute;
@@ -243,7 +244,7 @@
 }
 
 .content-container {
-	margin-top: 450px;
+	margin-top: 1050px;
 }
 .objective {
 	display: flex;
