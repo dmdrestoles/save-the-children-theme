@@ -1,4 +1,49 @@
 <?php
+function checkViewedPagesInCategory($userID, $categoryID){
+	global $wpdb;
+	$pageQueries = "
+		SELECT COUNT(*) as `count` FROM `{$wpdb->prefix}term_relationships`
+		INNER JOIN `{$wpdb->prefix}moove_activity_log`
+		ON (`{$wpdb->prefix}moove_activity_log`.`post_id` = `{$wpdb->prefix}term_relationships`.`object_id`)
+		WHERE `{$wpdb->prefix}term_relationships`.`term_taxonomy_id` = $categoryID;
+	";
+	$numberOfPagesInCategory = $wpdb->get_var($pageQueries);
+
+	$visitedPagesQueries="
+		SELECT COUNT(*) as `count` FROM `{$wpdb->prefix}term_relationships`
+		INNER JOIN `{$wpdb->prefix}moove_activity_log`
+		ON (`{$wpdb->prefix}moove_activity_log`.`post_id` = `{$wpdb->prefix}term_relationships`.`object_id`)
+		WHERE `{$wpdb->prefix}term_relationships`.`term_taxonomy_id` = $categoryID
+			AND `{$wpdb->prefix}moove_activity_log`.`user_id` = $userID;
+	";
+
+
+	$numberOfPagesVisited = $wpdb->get_var($visitedPagesQueries);
+
+
+	$value = round($numberOfPagesVisited * 100 / $numberOfPagesInCategory);
+	
+	return $value;
+	// $getPagesInCategory = $wpdb->get_results( "SELECT * FROM wp_moove_activity_log WHERE")
+}
+
+function checkIfVisitedPage($userID, $postID){
+	global $wpdb;
+
+	$visitedPagesQueries="
+		SELECT COUNT(*) as `count` FROM `{$wpdb->prefix}moove_activity_log`
+		WHERE `post_id` = $postID
+			AND `user_id` = $userID;
+	";
+
+	$visited = $wpdb->get_var($visitedPagesQueries);
+
+	if ($visited > 0){
+		return true;
+	}
+	return false;
+
+}
 
 function h2h_theme_support(){
 	add_theme_support('title-tag');
@@ -48,4 +93,5 @@ function h2h_register_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'h2h_register_scripts');
+
 ?>
