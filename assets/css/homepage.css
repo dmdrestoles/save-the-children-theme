@@ -149,7 +149,7 @@
 .header-caption {
 	width: 100%;
 	position: absolute;
-	top: 190px;
+	top: 30%;
 	display: flex;
 }
 .header-caption .title-container {

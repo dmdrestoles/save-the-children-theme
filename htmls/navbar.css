@@ -23,6 +23,24 @@
 	height: 14vh;
 	white-space: nowrap;
 }
+ul.sub-menu{ display: none; }
+
+ul.menu li.menu-item-has-children:hover > ul.sub-menu{
+    display: block;
+}
+
+ul.sub-menu a {
+	color: Black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+ul.submenu a:hover {
+	color: #DA291C;
+	text-decoration: underline;
+}
+
 .nav-item {
 	cursor: pointer;
 	display: flex;
