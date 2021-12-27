@@ -1,3 +1,7 @@
+<?php 
+		wp_enqueue_style("h2h-style-footer", get_template_directory_uri() . "/assets/css/footer.css", $version, "all");
+		wp_head();
+	?>
 <div class="footer">
 	<div>
 		<div class="title">About Save the Children Philippines</div>

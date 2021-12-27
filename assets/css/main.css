@@ -7,11 +7,11 @@ Author: Dan Mark Restoles
 */
 @font-face {
   font-family: GillSans;
-  src: url('fonts/Gill Sans/Fonts/GillSansInfantW01.ttf');
+  src: url('../fonts/Gill Sans/Fonts/GillSansInfantW01.ttf');
 }
 @font-face {
   font-family: TradeGothicBold;
-  src: url('fonts/Trade Gothic/Fonts/TradeGothicW02-BoldCn20.ttf');
+  src: url('../fonts/Trade Gothic/Fonts/TradeGothicW02-BoldCn20.ttf');
 }
 
 * {

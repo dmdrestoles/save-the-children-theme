@@ -1,5 +1,4 @@
 /* Header Carousel/Slider */
-
 #slider {
    background: White;
    height: 100%;
@@ -213,6 +212,7 @@
     background-color: #DA291C;
 	margin-left: -10vw;
 	margin-top: -150px;
+	top: 100%;
 }
 .scroll-down {
 	margin: auto;

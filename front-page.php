@@ -47,7 +47,7 @@ get_header();
 		</a>
 		<div class="arc">
 			<div class="scroll-down">
-				<img src="images/arrow.png">
+				<img src="<?php bloginfo('template_url'); ?>/assets/images/arrow.png">
 			</div>
 			<div class="title">Ano ang Heart to HEART?</div>
 			<div class="text">
@@ -62,7 +62,7 @@ get_header();
 	<div class="content-container">
 		<div class="objective">
 			<div class="img-content left">
-				<img src="images/placeholder.png">
+				<img src="<?php bloginfo('template_url'); ?>/assets/images/placeholder.png">
 			</div>
 			<div class="text-content">
 				<div class="title">Layunin ng Heart to HEART</div>
@@ -77,7 +77,7 @@ get_header();
 				</div>
 			</div>
 			<div class="img-content right">
-				<img src="images/placeholder.png">
+				<img src="<?php bloginfo('template_url'); ?>/assets/images/placeholder.png">
 			</div>
 		</div>
 		<div class="video-instructions">
@@ -86,7 +86,7 @@ get_header();
 				<source src="#" type="video/mp4"> 
 			</video>
 			-->
-			<img class="video" src="images/video-placeholder.png" style="width: 1100px; height: 550px;">
+			<img class="video" src="<?php bloginfo('template_url'); ?>/assets/images/video-placeholder.png" style="width: 1100px; height: 550px;">
 			<div class="title">Paano gamitin ang manual o site na ito?</div>
 			<div class="text">
 				Ang Heart to HEART ay nakaayos sa anim (6) na sessions. Ang bawat session ay dinisenyo para maibigay sa apat (4) na oras. 

@@ -38,7 +38,7 @@ Author: Dan Mark Restoles
 	justify-content: space-between;
 }
 
-.dropdown {
+.dropdown, .group-2 {
 	font-family: GillSans;
 	font-size: 20px;
 	height: 14vh;
