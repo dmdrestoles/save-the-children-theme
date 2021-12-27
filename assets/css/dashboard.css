@@ -80,6 +80,11 @@
 	background: White;
 	border-radius: 20px;
 }
+.bar div {
+	height: 100%;
+	background: #F2A900;
+	border-radius: 20px;
+}
 .progress-bar .percentage {
 	font-family: Gill Sans Infant Std;
 	font-weight: bold;
