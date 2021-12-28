@@ -30,6 +30,9 @@ Author: Dan Mark Restoles
 .account-logo{
 	width:80%;
 }
+.login {
+	color: White;
+}
 
 .group-2{
 	width: 70%;
@@ -116,5 +119,5 @@ ul.menu li.menu-item-has-children:hover > ul.sub-menu{
 	width: 10%;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: -10;
-	margin: 16% 0 0 -2.5%;
+	margin: 17% 0 0 -2.5%;
 }
