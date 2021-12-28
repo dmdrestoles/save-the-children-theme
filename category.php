@@ -17,7 +17,7 @@ $posts = get_posts($args);
 
 <div class="courseOutline">
 	<div class="returnToDashboard">
-		<a class="back" href="/dashboard">
+		<a class="back" href="<?php echo get_home_url(); ?>/dashboard">
 			<img src="<?php bloginfo('template_url'); ?>/assets/images/back.png">
 			<div>Return to Dashboard</div>
 		</a>

@@ -42,7 +42,7 @@ get_header();
 				</h3>
 			</div>
 		</div>
-		<a href='<?php ?>'>
+		<a href="<?php echo get_home_url(); ?>/dashboard">
 			<div class="startBtn">UMPISAHAN NA NATIN</div>
 		</a>
 		<div class="arc">
@@ -103,7 +103,7 @@ get_header();
 				kanilang mga anak. Kailangan nilang mai-report ang mga assignment na ito sa simula ng susunod na session.
 			</div>
 				
-			<a href='#'>
+			<a href="<?php echo get_home_url(); ?>/dashboard">
 				<div class="bottomStartBtn">UMPISAHAN ANG COURSE</div>
 			</a>
 		</div>

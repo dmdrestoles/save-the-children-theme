@@ -34,25 +34,22 @@
 			?>
 		</div>
 		<div style="visibility: hidden; "></div>
+		<div style="visibility: hidden; "></div>
 		<div class="dropdown account menu-item">
 			<?php if (is_user_logged_in()): ?>
 				<a class="logo" href='#'>
 					<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
 				</a>
 				<div class="dropdown-content">
-					<a href="<?php echo get_edit_profile_url(); ?>">My Account</a>
+					<a href="<?php echo get_edit_profile_url();?>/">My Account</a>
 					<a href="#s2">Help</a>
 					<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 				</div>
-			<?php ?>
-			<!-- if user is not logged in, login button -->
 			<?php else: ?>
 				<a class="logo" href='#'>
 					<div class="account-logo login">LOGIN</div>
 				</a>
-				<div class="dropdown-content">
-					<a href="<?php echo get_current_url(); ?>/login">Login</a>
-				</div>
 			<?php endif; ?>
+
 		</div>
 	</div>
