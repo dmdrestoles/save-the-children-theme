@@ -7,12 +7,18 @@ $category = get_queried_object();
 $userID = wp_get_current_user()->id;
 $categoryID = $category->term_id;
 $progress = checkViewedPagesInCategory($userID, $categoryID);
+$args = array(
+	'orderby' => 'date',
+	'order' => 'ASC',
+	'category' => $categoryID
+);
+$posts = get_posts($args);
 ?>
 
 <div class="courseOutline">
 	<div class="returnToDashboard">
-		<a class="back">
-			<img src="images/back.png">
+		<a class="back" href="/dashboard">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/back.png">
 			<div>Return to Dashboard</div>
 		</a>
 	</div>
@@ -33,7 +39,11 @@ $progress = checkViewedPagesInCategory($userID, $categoryID);
 		<div class="outline">
 			<div class="title">COURSE OUTLINE</div>
 			<div>
-				<?php foreach (get_posts($categoryID) as $post): ?> 
+				<?php foreach ($posts as $post): 
+					if (in_category('Uncategorized', $post)){
+						continue;
+					}
+					?> 
 				<a href="<?php echo get_permalink($post->ID); ?>" class="course-item">
 					<?php 
 						if (checkIfVisitedPage( $userID, $post->ID )):

@@ -2,24 +2,22 @@
 function checkViewedPagesInCategory($userID, $categoryID){
 	global $wpdb;
 	$pageQueries = "
-		SELECT COUNT(*) as `count` FROM `{$wpdb->prefix}term_relationships`
-		INNER JOIN `{$wpdb->prefix}moove_activity_log`
-		ON (`{$wpdb->prefix}moove_activity_log`.`post_id` = `{$wpdb->prefix}term_relationships`.`object_id`)
+		SELECT DISTINCT(`{$wpdb->prefix}posts`.`ID`) FROM `{$wpdb->prefix}term_relationships`
+		INNER JOIN `{$wpdb->prefix}posts`
+		ON (`{$wpdb->prefix}posts`.`ID` = `{$wpdb->prefix}term_relationships`.`object_id`)
 		WHERE `{$wpdb->prefix}term_relationships`.`term_taxonomy_id` = $categoryID;
 	";
-	$numberOfPagesInCategory = $wpdb->get_var($pageQueries);
+	$numberOfPagesInCategory = count($wpdb->get_var($pageQueries));
 
 	$visitedPagesQueries="
-		SELECT COUNT(*) as `count` FROM `{$wpdb->prefix}term_relationships`
+		SELECT DISTINCT `{$wpdb->prefix}moove_activity_log`.`post_id` as `count` FROM `{$wpdb->prefix}term_relationships`
 		INNER JOIN `{$wpdb->prefix}moove_activity_log`
 		ON (`{$wpdb->prefix}moove_activity_log`.`post_id` = `{$wpdb->prefix}term_relationships`.`object_id`)
 		WHERE `{$wpdb->prefix}term_relationships`.`term_taxonomy_id` = $categoryID
 			AND `{$wpdb->prefix}moove_activity_log`.`user_id` = $userID;
 	";
 
-
-	$numberOfPagesVisited = $wpdb->get_var($visitedPagesQueries);
-
+	$numberOfPagesVisited = count($wpdb->get_var($visitedPagesQueries));
 
 	$value = round($numberOfPagesVisited * 100 / $numberOfPagesInCategory);
 	

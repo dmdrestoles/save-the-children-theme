@@ -107,28 +107,34 @@ div.breadcrumbs > div:nth-child(2) {
 	font-size: 40px;
 	color: Black;
 }
-.body-header {
+.body h1 {
 	font-family: GillSans;
 	font-weight: bold;
 	font-size: 30px;
 	color: #000000;
 	margin: 40px 0 25px;
 }
-.body-subheader {
+.body h2 {
 	font-family: GillSans;
 	font-weight: bold;
 	font-size: 20px;
 	color: #000000;
 	margin: 25px 0;
 }
-.body-text {
+
+.body h3, h4, h5, p, td {
 	font-family: GillSans;
-	font-weight: 500;
 	font-size: 18px;
 	color: #000000;
 	text-align: left;
+	margin: 25px 0;
 }
-.body-list {
+
+table{
+	margin: 50px 0;
+}
+
+.body li {
 	font-family: GillSans;
 	font-weight: 500;
 	font-size: 18px;

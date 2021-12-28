@@ -5,9 +5,6 @@ wp_enqueue_style("h2h-style-dashboard", get_template_directory_uri() . "/assets/
 get_header(); 
 
 $categories = get_categories();
-$num = 1;
-$viewed_pages = 1;
-
 ?>
 
 <div class="dashboard">
@@ -18,7 +15,7 @@ $viewed_pages = 1;
 			<div class="options">
 				<a href="#">My Account</a>
 				<a href="#">Help</a>
-				<a href="#">Logout</a>
+				<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 			</div>
 		</div>
 		<div class="dashboard-content">
@@ -58,7 +55,7 @@ $viewed_pages = 1;
 							</div>
 						</div>
 						<div class="details">
-							<div class="session-number">Session <?php echo $num++; ?></div>
+							<div class="session-number"><?php echo $category->description; ?></div>
 							<div class="session-title"><a href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name; ?></a></div>
 						</div>
 					</div>

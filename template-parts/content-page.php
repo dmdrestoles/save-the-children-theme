@@ -1,4 +1,4 @@
-<div class="container">
+<div class="body">
 	<?php
 		the_content();
 	?>
