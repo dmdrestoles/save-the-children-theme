@@ -38,7 +38,7 @@
 				<a class="logo" href='#'>
 					<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
 				</a>
-				<div class="dropdown-content sub-menu">
+				<div class="dropdown-content">
 					<a href="<?php echo get_edit_profile_url(); ?>">My Account</a>
 					<a href="#s2">Help</a>
 					<a href="<?php echo wp_logout_url(); ?>">Logout</a>
@@ -49,7 +49,7 @@
 				<a class="logo" href='#'>
 					<div class="account-logo login">LOGIN</div>
 				</a>
-				<div class="dropdown-content sub-menu">
+				<div class="dropdown-content">
 					<a href="<?php echo bloginfo('template_url'); ?>/login">Login</a>
 				</div>
 			<?php endif; ?>
