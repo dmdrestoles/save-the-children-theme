@@ -37,7 +37,7 @@
 			<?php 
 				if (checkIfVisitedPage( $userID, $post->ID )):
 			?>
-			<div class="complete">COMPLETED</div>
+			<div class="tracker complete">COMPLETED</div>
 			<?php else: ?>
 			<div class="tracker">IN PROGRESS</div>
 			<?php endif; ?>
@@ -49,9 +49,6 @@
 		</div>
 	</div>
 	
-	<!-- Is it possible to just change this part for every other pages?
-		If yes, please use the content.html
-	-->
 	<div class="page-content">
 		<div class="page-title"><?php the_title(); ?></div>
 		
@@ -66,7 +63,7 @@
 			<a href="<?php echo get_permalink($previd); ?>">
 			<div class="prev">< PREVIOUS</div>
 		<?php endif; ?>
-
+		<div style="visibility: hidden"></div>
 		<?php if ($nextid !== false): ?>
 			<a href="<?php echo get_permalink($nextid); ?>">
 			<div class="next">NEXT ></div>

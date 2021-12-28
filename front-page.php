@@ -42,7 +42,7 @@ get_header();
 				</h3>
 			</div>
 		</div>
-		<a href='#'>
+		<a href='<?php ?>'>
 			<div class="startBtn">UMPISAHAN NA NATIN</div>
 		</a>
 		<div class="arc">
