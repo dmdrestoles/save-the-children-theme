@@ -35,7 +35,8 @@
 		</div>
 		<div class="dropdown account">
 			<a class="logo" href='#'>
-				<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
+				<div class="account-logo login">LOGIN</div>
+				<!--<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">-->
 			</a>
 			
 			<?php if (is_user_logged_in()): ?>
