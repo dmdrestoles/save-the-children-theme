@@ -33,7 +33,8 @@
 				);
 			?>
 		</div>
-		<div class="dropdown account">
+		<div style="visibility: hidden; "></div>
+		<div class="dropdown account menu-item">
 			<a class="logo" href='#'>
 				<div class="account-logo login">LOGIN</div>
 				<!--<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">-->
