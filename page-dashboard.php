@@ -11,7 +11,7 @@ $categories = get_categories();
 	<div class="title">Facilitator's Manual ng Heart to HEART</div>
 	<div class="dashboard-container">
 		<div class="sidebar">
-			<div class="header">Hello, Dan!</div>
+			<div class="header">Hello, <?php echo wp_get_current_user()->first_name; ?>!</div>
 			<div class="options">
 				<a href="#">My Account</a>
 				<a href="#">Help</a>
@@ -23,18 +23,23 @@ $categories = get_categories();
 				<div class="title">INTRODUCTION</div>
 				<div class="line"></div>
 				<div class="container">
+					<?php foreach ($categories as $category): 
+						if ($category->name == "Road to Positive Parenting"):
+							$computedValue = checkViewedPagesInCategory(wp_get_current_user()->id, $category->cat_ID);
+					?>
 					<div class="session">
 						<div class="session-container">
 							<div class="progress-bar">
-								<div class="bar"><div style="width: 20%;"></div></div>
-								<div class="percentage">0% Complete</div>
+								<div class="bar"><div style="width: <?php echo $computedValue; ?>%;"></div></div>
+								<div class="percentage"><?php echo $computedValue; ?>% Complete</div>
 							</div>
 						</div>
 						<div class="details">
-							<div class="session-number">Introduksyon</div>
-							<div class="session-title">Road to Positive Parenting</div>
+							<div class="session-number"><?php echo $category->description; ?></div>
+							<div class="session-title"><a href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name; ?></a></div>
 						</div>
 					</div>
+					<?php endif; endforeach; ?>
 				</div>
 			</div>					
 			<div>
@@ -42,7 +47,7 @@ $categories = get_categories();
 				<div class="line"></div>
 				<div class="container">
 					<?php foreach ($categories as $category): 
-						if ($category->name == "Uncategorized"){
+						if ($category->name == "Uncategorized" || $category->name == "Road to Positive Parenting"){
 							continue;
 						}
 						$computedValue = checkViewedPagesInCategory(wp_get_current_user()->id, $category->cat_ID);

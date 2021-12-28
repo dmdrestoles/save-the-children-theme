@@ -108,6 +108,6 @@
 	font-size: 30px;
 }
 
-a:visited {
+a, a:visited {
 	color: black;
 }
