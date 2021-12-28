@@ -10,7 +10,7 @@
 	color: Black;
 	margin-top: 70px;
 }
-.text {
+label {
 	font-family: GillSans;
 	font-weight: 500;
 	font-size: 18px;
@@ -20,16 +20,16 @@
 	margin: auto;
 	margin-top: 50px;	
 }
-.login-container {
+#loginform {
 	width: 40%;
 	margin: auto;
 	margin-top: 30px;
 }
-.login-container label {
+#loginform label {
 	color: Black;
 	text-align: left;
 }
-.login-container input {
+#loginform input {
 	margin-top: 10px;
 	width: 100%;
 	height: 40px;
@@ -38,7 +38,7 @@
 	border-radius: 5px;
 	padding: 10px;	
 }
-.login-container input[type="text"]
+#loginform input[type="text"]
 {
     font-family: GillSans;
 	font-weight: 500;
@@ -51,7 +51,7 @@
 	color: #DA291C;
 	margin-top: 20px;
 }
-.login-container .loginBtn {
+#loginform #wp-submit {
 	background: #F2A900;
 	border-radius: 5px;
 	height: 60px;
@@ -60,7 +60,7 @@
 	font-weight: bold;
 	font-size: 20px;
 	color: White;
-	margin: 0 30%;
+	margin: 10% 30%;
 }
 .register {
 	display: block;

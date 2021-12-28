@@ -11,12 +11,14 @@ $categories = get_categories();
 	<div class="title">Facilitator's Manual ng Heart to HEART</div>
 	<div class="dashboard-container">
 		<div class="sidebar">
+		<?php if (is_user_logged_in()): ?>
 			<div class="header">Hello, <?php echo wp_get_current_user()->first_name; ?>!</div>
 			<div class="options">
 				<a href="#">My Account</a>
 				<a href="#">Help</a>
 				<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 			</div>
+			<?php endif; ?>
 		</div>
 		<div class="dashboard-content">
 			<div>

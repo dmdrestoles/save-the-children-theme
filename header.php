@@ -37,10 +37,19 @@
 			<a class="logo" href='#'>
 				<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
 			</a>
-			<div class="dropdown-content">
-				<a href="#s1">My Account</a>
-				<a href="#s2">Help</a>
-				<a href="#s3">Logout</a>
-			</div>
+			
+			<?php if (is_user_logged_in()): ?>
+				<div class="dropdown-content">
+					<a href="#s1">My Account</a>
+					<a href="#s2">Help</a>
+					<a href="<?php echo wp_logout_url(); ?>">Logout</a>
+				</div>
+			<?php ?>
+			<!-- if user is not logged in, login button -->
+			<?php else: ?>
+				<div class="dropdown-content">
+					<a href="<?php echo bloginfo('template_url'); ?>/login">Login</a>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
