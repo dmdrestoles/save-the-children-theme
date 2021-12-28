@@ -14,7 +14,7 @@ $categories = get_categories();
 		<?php if (is_user_logged_in()): ?>
 			<div class="header">Hello, <?php echo wp_get_current_user()->first_name; ?>!</div>
 			<div class="options">
-				<a href="#">My Account</a>
+				<a href="<?php echo get_edit_profile_url(); ?>">My Account</a>
 				<a href="#">Help</a>
 				<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 			</div>
