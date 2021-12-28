@@ -33,7 +33,8 @@
 				);
 			?>
 		</div>
-		<div class="dropdown account">
+		<div style="visibility: hidden; "></div>
+		<div class="dropdown account menu-item">
 			<?php if (is_user_logged_in()): ?>
 				<a class="logo" href='#'>
 					<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
@@ -50,7 +51,7 @@
 					<div class="account-logo login">LOGIN</div>
 				</a>
 				<div class="dropdown-content">
-					<a href="<?php echo bloginfo('template_url'); ?>/login">Login</a>
+					<a href="<?php echo get_current_url(); ?>/login">Login</a>
 				</div>
 			<?php endif; ?>
 		</div>
