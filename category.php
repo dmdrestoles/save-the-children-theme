@@ -1,38 +1,53 @@
-<?php
-/**
-* A Simple Category Template
-*/
- 
-get_header(); ?> 
- 
-<section id="primary" class="site-content">
-<div id="content" role="main">
+<?php /*Template Name: Course Outline*/ ?>
 
 <?php 
-echo wp_get_current_user()->display_name;
-// Check if there are any posts to display
-if ( have_posts() ) : ?>
- 
-<header class="archive-header">
-<h1 class="archive-title"><?php single_cat_title(); ?> (<?php echo get_category(get_query_var( 'cat' ))->count; ?>)</h1>
- 
-</header>
- 
-<?php
- 
-// The Loop
-while ( have_posts() ) : the_post(); ?>
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+wp_enqueue_style("h2h-style-outline", get_template_directory_uri() . "/assets/css/courseOutline.css", $version, "all");
+get_header(); 
+$category = get_queried_object();
+$userID = wp_get_current_user()->id;
+$categoryID = $category->term_id;
+$progress = checkViewedPagesInCategory($userID, $categoryID);
+?>
 
- 
-<?php endwhile; 
- 
-else: ?>
-<p>Sorry, no posts matched your criteria.</p>
- 
- 
-<?php endif; ?>
+<div class="courseOutline">
+	<div class="returnToDashboard">
+		<a class="back">
+			<img src="images/back.png">
+			<div>Return to Dashboard</div>
+		</a>
+	</div>
+	<div class="outline-content">
+		<div class="session">
+			<div>
+				<div class="session-container"></div>
+				<div class="details">
+					<div class="session-number"><?php echo $category->description; ?></div>
+					<div class="session-title"><?php echo $category->cat_name; ?></div>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bar"><div style="width: <?php echo $progress; ?>%;"></div></div><!-- change value of width here for progress bar completion -->
+				<div class="percentage"><?php echo $progress; ?>% Complete</div> <!-- numerical value here should besame with width above -->
+			</div>
+		</div>
+		<div class="outline">
+			<div class="title">COURSE OUTLINE</div>
+			<div>
+				<?php foreach (get_posts($categoryID) as $post): ?> 
+				<a href="<?php echo get_permalink($post->ID); ?>" class="course-item">
+					<?php 
+						if (checkIfVisitedPage( $userID, $post->ID )):
+					?>
+					<span id="completed"></span>
+					<?php else: ?>
+					<span> </span>
+					<?php endif; ?>
+					<div><?php echo $post->post_title; ?></div>
+				</a>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
 </div>
-</section>
 
 <?php get_footer(); ?>

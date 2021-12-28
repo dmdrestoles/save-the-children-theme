@@ -25,3 +25,7 @@ a {
 body {
     overflow-x: hidden;
 }
+
+.container {
+    max-width: var(--content-max-width);
+}
