@@ -42,8 +42,6 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
         update_user_meta( $current_user->ID, 'first_name', esc_attr( $_POST['first-name'] ) );
     if ( !empty( $_POST['last-name'] ) )
         update_user_meta($current_user->ID, 'last_name', esc_attr( $_POST['last-name'] ) );
-    if ( !empty( $_POST['description'] ) )
-        update_user_meta( $current_user->ID, 'description', esc_attr( $_POST['description'] ) );
 
     /* Redirect so the page will show updated info.*/
   /*I am not Author of this Code- i dont know why but it worked for me after changing below line to if ( count($error) == 0 ){ */
@@ -69,12 +67,11 @@ get_header();
                         <?php _e('You must be logged in to edit your profile.', 'profile'); ?>
                     </p><!-- .warning -->
             <?php else : ?>
-                <?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
 				<div class="sidebar">
 				<?php if (is_user_logged_in()): ?>
 					<div class="header">Hello, <?php echo wp_get_current_user()->first_name; ?>!</div>
 					<div class="options">
-						<a href="<?php echo get_edit_profile_url(); ?>" style="color: #DA291C">My Account</a>
+						<a href="<?php echo get_home_url(); ?>/my-account" style="color: #DA291C">My Account</a>
 						<a href="#">Help</a>
 						<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 					</div>
@@ -130,6 +127,8 @@ get_header();
 							</div>
 						</form><!-- #adduser -->
 					</div>
+					<?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
+					<?php if ( count($error) <= 0  ) echo '<p class="success">' . implode("<br />", $error) . '</p>'; ?>
 				</div>
 				</div>
             <?php endif; ?>
