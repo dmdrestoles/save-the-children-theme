@@ -61,7 +61,7 @@
 .profile-pic img, .profile-info {
 	width: 100%;
 }
-.profile-info form {
+form .profile-info{
 	height: 100%;
 	display: grid;
 	grid-template-columns: 49% 49%;
@@ -71,48 +71,48 @@
 	row-gap: 4%;
 	grid-row-gap: 4%;
 }
-.profile-info form > * {
+form .profile-info > * {
 	margin: 0;
 }
-.firstName {
+.first-name {
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 2;
 }
-.firstNameInput {
+.first-name-input {
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	
 }
-.lastName {
+.last-name {
 	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
 }
-.lastNameInput {
+.last-name-input {
 	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
-.emailAdd {
+.email {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 3;
 	grid-row-end: 4;
 	
 }
-.emailInput {
+.email-input {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 4;
 	grid-row-end: 5;
 }
-.profile-info form label {
+form .profile-info label {
 	font-family: GillSans;
 	font-weight: 500;
 	font-size: 20px;
