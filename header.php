@@ -38,7 +38,7 @@
 		<div class="dropdown account menu-item">
 			<?php if (is_user_logged_in()): ?>
 				<a class="logo" href='#'>
-					<img class="account-logo" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
+					<img class="account-logo icon" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
 				</a>
 				<div class="dropdown-content">
 					<a href="<?php echo get_edit_profile_url();?>/">My Account</a>

@@ -34,7 +34,8 @@ Author: Dan Mark Restoles
 	color: White;
 }
 .icon {
-	height: 60%;
+	height: 60px;
+	width: 80px;
 }
 
 .group-2{

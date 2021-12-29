@@ -63,12 +63,7 @@ form {
 .profile-pic img, .profile-info {
 	width: 100%;
 }
-<<<<<<< Updated upstream
-.profile-info form {
-	height: 100%;
-=======
 form .profile-info{
->>>>>>> Stashed changes
 	display: grid;
 	grid-template-columns: 48.5% 48.5%;
 	column-gap: 3%;
@@ -80,47 +75,6 @@ form .profile-info{
 .profile-info form > * {
 	margin: 0;
 }
-<<<<<<< Updated upstream
-.firstName {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
-.firstNameInput {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
-	
-}
-.lastName {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
-}
-.lastNameInput {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
-}
-.emailAdd {
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 3;
-	grid-row-end: 4;
-	
-}
-.emailInput {
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 4;
-	grid-row-end: 5;
-}
-.profile-info form label {
-=======
 form input{
 	width: 100%;
 	height: 40px;
@@ -130,7 +84,6 @@ form input{
 	margin: 10px 0;
 }
 form label {
->>>>>>> Stashed changes
 	font-family: GillSans;
 	font-weight: 500;
 	font-size: 20px;

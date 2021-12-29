@@ -2,7 +2,6 @@
 	get_header();
 	
 	$category = get_the_category(get_the_ID())[0];
-	echo $category->cat_name;
 	
 	wp_enqueue_style("h2h-style-post", get_template_directory_uri() . "/assets/css/coursePages.css", $version, "all");
 	
@@ -19,8 +18,8 @@
 
 	$post_id = $post->ID;
 	$ids = array();
-	foreach ( $posts as $thepost ) {
-		$ids[] = $thepost->ID;
+	foreach ( $posts as $xpost ) {
+		$ids[] = $xpost->ID;
 	}
 	// get and echo previous and next post in the same category
 	$thisindex = array_search( $post_id, $ids );
@@ -53,8 +52,7 @@
 		<div class="page-title"><?php the_title(); ?></div>
 		
 		<?php
-			the_post();
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'post' );
 		?>
 	</div>
 	<div class="line"></div>
