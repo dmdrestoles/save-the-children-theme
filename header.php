@@ -41,12 +41,12 @@
 					<img class="account-logo icon" src="<?php bloginfo('template_url'); ?>/assets/images/icon.png">
 				</a>
 				<div class="dropdown-content">
-					<a href="<?php echo get_edit_profile_url();?>/">My Account</a>
+					<a href="<?php echo get_home_url();?>/my-account">My Account</a>
 					<a href="#s2">Help</a>
 					<a href="<?php echo wp_logout_url(); ?>">Logout</a>
 				</div>
 			<?php else: ?>
-				<a class="logo" href='#'>
+				<a class="logo" href='<?php echo get_home_url(); ?>/login'>
 					<div class="account-logo login">LOGIN</div>
 				</a>
 			<?php endif; ?>

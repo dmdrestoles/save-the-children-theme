@@ -31,7 +31,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
     if ( !empty( $_POST['email'] ) ){
         if (!is_email(esc_attr( $_POST['email'] )))
             $error[] = __('The Email you entered is not valid.  please try again.', 'profile');
-        elseif(email_exists(esc_attr( $_POST['email'] )) != $current_user->id )
+        elseif(email_exists(esc_attr( $_POST['email'] )) == $current_user->id )
             $error[] = __('This email is already used by another user.  try a different one.', 'profile');
         else{
             wp_update_user( array ('ID' => $current_user->ID, 'user_email' => esc_attr( $_POST['email'] )));
@@ -139,7 +139,7 @@ get_header();
 							<div class="modal-content">
 								<div>
 									<?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
-									<?php if ( count($error) <= 0  ) echo '<p class="success">' . implode("<br />", $error) . '</p>'; ?>
+									<?php if ( count($error) <= 0  ) echo '<p class="success">Account updated!</p>'; ?>
 								</div>
 							</div>
 							<div class="modal-footer">

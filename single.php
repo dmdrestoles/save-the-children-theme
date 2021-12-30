@@ -59,7 +59,8 @@
 	<div class="page-footer">
 		<?php if ($previd !== false): ?>
 			<a href="<?php echo get_permalink($previd); ?>">
-			<div class="prev">< PREVIOUS</div>
+				<div class="prev">< PREVIOUS</div>
+			</a>
 		<?php endif; ?>
 		<div style="visibility: hidden"></div>
 		<?php if ($nextid !== false): ?>
