@@ -12,7 +12,8 @@
 	$args = array( 
 		'category' => $categoryID,
 		'orderby'  => 'post_date',
-		'order'    => 'ASC'
+		'order'    => 'ASC',
+		'numberposts' => -1
 	);
 	$posts = get_posts( $args );
 
