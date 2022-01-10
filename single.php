@@ -30,7 +30,7 @@
 <div class="coursePage">
 	<div class="progress-tracker">
 		<div class="breadcrumbs">
-			<div class="main-title"><?php echo $category->cat_name;?></div>
+			<div class="main-title"><a href="<?php echo get_category_link();?>"><?php echo $category->cat_name;?></a></div>
 			<div> > </div>
 			<div class="page-title"> <?php echo the_title(); ?></div>
 			<?php 

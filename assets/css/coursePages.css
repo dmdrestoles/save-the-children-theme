@@ -21,7 +21,7 @@ div.breadcrumbs > div:nth-child(2) {
 	color: #7C7C7C;
 	margin: 0 20px;
 }
-.breadcrumbs .main-title {
+.breadcrumbs .main-title a {
 	font-family: GillSans;
 	font-weight: bold;
 	font-size: 18px;

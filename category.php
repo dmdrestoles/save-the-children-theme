@@ -10,7 +10,8 @@ $progress = checkViewedPagesInCategory($userID, $categoryID);
 $args = array(
 	'orderby' => 'date',
 	'order' => 'ASC',
-	'category' => $categoryID
+	'category' => $categoryID,
+	'numberposts' => -1
 );
 $posts = get_posts($args);
 ?>
